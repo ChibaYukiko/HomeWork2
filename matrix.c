@@ -29,16 +29,12 @@ int main(int argc, char** argv)
       a[i * n + j] = i * n + j; // A[i][j]
       b[i * n + j] = j * n + i; // B[i][j]
       c[i * n + j] = 0; // C[i][j]
-      printf("a[%d][%d]=%lf\n", i, j, a[i * n + j]);
-      printf("b[%d][%d]=%lf\n", i, j, b[i * n + j]);
+      //printf("a[%d][%d]=%lf\n", i, j, a[i * n + j]);
+      //printf("b[%d][%d]=%lf\n", i, j, b[i * n + j]);
     }
   }
 
   double begin = get_time();
-
-  /**************************************/
-  /* Write code to calculate C = A * B. */
-  /**************************************/
 
   for(i = 0; i < n; i++){
     for(j = 0; j < n ; j++){
@@ -48,8 +44,6 @@ int main(int argc, char** argv)
     }
   }
 
-  // c[i][j] = Σa[i][k]*b[k][j]
-
   double end = get_time();
   printf("time: %.6lf sec\n", end - begin);
 
@@ -58,7 +52,7 @@ int main(int argc, char** argv)
   for (i = 0; i < n; i++) {
     for (j = 0; j < n; j++) {
       sum += c[i * n + j];
-      printf("c[%d][%d]=%lf\n", i, j, c[i * n + j]);
+      //printf("c[%d][%d]=%lf\n", i, j, c[i * n + j]);
     }
   }
   // Print out the sum of all values in C.
